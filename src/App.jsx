@@ -5,6 +5,12 @@ import { Home, Server, Network, Shield, MonitorPlay, Users } from 'lucide-react'
 // Importamos el componente que da estructura a la página de inicio.
 import Inicio from './components/Inicio';
 
+// Importamos el componente que da estructura a la página de instalación.
+import Instalacion from './components/Instalacion';
+
+// Importamos el componente que da estructura a la página de Active Directory.
+import ActiveDirectory from './components/ActiveDirectory';
+
 export default function App() {
   return (
     <Router>
@@ -34,17 +40,19 @@ export default function App() {
               <span className="font-medium text-sm">Inicio y Topología</span>
             </NavLink>
 
-            {/* Marcadores de posición para las siguientes fases */}
+            {/* Enlace a Instalación */}
             <NavLink 
               to="/instalacion" 
               className={({ isActive }) => 
                 `flex items-center gap-3 px-4 py-3 rounded-xl transition-colors ${isActive ? 'bg-brand-600 text-white shadow-md' : 'hover:bg-slate-800 hover:text-white'}`
               }
             >
-              <MonitorPlay size={20} className="text-emerald-400" />
-              <span className="font-medium text-sm">2.1.1 Instalación</span>
-            </NavLink>
 
+              <MonitorPlay size={20} className="text-emerald-400" />
+              <span className="font-medium text-sm">Instalación</span>
+            </NavLink>
+            
+            {/* Enlace a Active Directory */}
             <NavLink 
               to="/active-directory" 
               className={({ isActive }) => 
@@ -52,7 +60,7 @@ export default function App() {
               }
             >
               <Users size={20} className="text-blue-400" />
-              <span className="font-medium text-sm">2.1.2 Active Directory</span>
+              <span className="font-medium text-sm">Active Directory</span>
             </NavLink>
             
             {/* Puedes agregar el resto de enlaces aquí después */}
@@ -66,22 +74,11 @@ export default function App() {
               {/* Aquí le decimos a React que cuando la ruta sea "/" muestre tu componente Inicio */}
               <Route path="/" element={<Inicio />} />
               
-              {/* Rutas en construcción para los siguientes pasos */}
-              <Route path="/instalacion" element={
-                <div className="flex flex-col items-center justify-center h-64 text-slate-500">
-                  <MonitorPlay size={48} className="mb-4 text-slate-300" />
-                  <h2 className="text-2xl font-bold">Instalación Básica</h2>
-                  <p>Próximamente crearemos este componente...</p>
-                </div>
-              } />
+              {/* Ruta para Instalación */}
+              <Route path="/instalacion" element={<Instalacion />} />
               
-              <Route path="/active-directory" element={
-                <div className="flex flex-col items-center justify-center h-64 text-slate-500">
-                  <Users size={48} className="mb-4 text-slate-300" />
-                  <h2 className="text-2xl font-bold">Active Directory</h2>
-                  <p>Próximamente crearemos este componente...</p>
-                </div>
-              } />
+              {/* Ruta para Active Directory */}
+              <Route path="/active-directory" element={<ActiveDirectory />} />
             </Routes>
           </div>
         </main>
