@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
-import { Home, Server, Network, Shield, MonitorPlay, Users } from 'lucide-react';
+import { Home, Server, Network, Shield, MonitorPlay, Users, Monitor } from 'lucide-react';
 
 // Importamos el componente que da estructura a la página de inicio.
 import Inicio from './components/Inicio';
@@ -10,6 +10,9 @@ import Instalacion from './components/Instalacion';
 
 // Importamos el componente que da estructura a la página de Active Directory.
 import ActiveDirectory from './components/ActiveDirectory';
+
+// Importamos el componente que da estructura a la página de Cliente Dominio.
+import ClienteDominio from './components/ClienteDominio';
 
 export default function App() {
   return (
@@ -64,6 +67,18 @@ export default function App() {
             </NavLink>
             
             {/* Puedes agregar el resto de enlaces aquí después */}
+
+            {/* Enlace a Cliente Dominio */}
+
+            <NavLink 
+              to="/cliente-dominio" 
+              className={({ isActive }) => 
+                `flex items-center gap-3 px-4 py-3 rounded-xl transition-colors ${isActive ? 'bg-brand-600 text-white shadow-md' : 'hover:bg-slate-800 hover:text-white'}`
+              }
+            >
+              <Monitor size={20} className="text-cyan-400" />
+              <span className="font-medium text-sm"> Conectar Cliente</span>
+            </NavLink>
           </nav>
         </aside>
 
@@ -79,6 +94,10 @@ export default function App() {
               
               {/* Ruta para Active Directory */}
               <Route path="/active-directory" element={<ActiveDirectory />} />
+
+              {/* Ruta para Cliente Dominio */}
+              <Route path="/cliente-dominio" element={<ClienteDominio />} />
+
             </Routes>
           </div>
         </main>
