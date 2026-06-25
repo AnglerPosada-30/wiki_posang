@@ -97,3 +97,27 @@ Este prompt destaca por el uso de **Instrucciones de Formato Específico**, dict
 
 **💡 Justificación técnica:**
 Representa el prompt más avanzado del proyecto. Demuestra **Anticipación de Errores** ("Maneja correctamente las barras invertidas... para que no rompan el código"), lo que previene fallos de compilación en Vite. Además, incluye **Diseño Basado en Contexto**, exigiendo colores de alerta (rojo/rosado) para advertir al usuario sobre pasos críticos del laboratorio (Kerberos).
+
+
+## 🛠️ Prompt 5: Servicios de Red (DHCP) y Usuarios
+**Componente:** `ServiciosRed.jsx`
+**Objetivo:** Integrar un alto volumen de capturas de pantalla sin saturar la interfaz de usuario, manteniendo la legibilidad del manual.
+
+> **Prompt utilizado:**
+> "Actúa como un desarrollador UX/UI experto en React. Necesito que crees el componente `ServiciosRed.jsx` basado en la sección '2.1.4 Servicios de Red (DHCP) y Usuarios' de mi wiki.
+> 
+> **Requisitos técnicos y de diseño:**
+> - Sigue utilizando Tailwind CSS para mantener la estética de tarjetas (`bg-white`, `rounded-2xl`, `shadow-sm`).
+> - Utiliza una paleta de acento en tonos morados (`text-purple-600`, `bg-purple-50`) para diferenciar visualmente esta fase de las anteriores.
+> - Importa iconos de `lucide-react` (ej. Network, FolderTree, Users).
+> 
+> **Instrucciones de Contenido e Imágenes (Crítico):**
+> Usa el texto exacto de mi archivo `docs_posada/05_servicios_red_posada.md`. Esta sección contiene 19 capturas de pantalla. Para evitar un scroll infinito, agrupa las etiquetas `<img>` de cada sub-paso utilizando CSS Grid de Tailwind (ej. `grid grid-cols-2 lg:grid-cols-4 gap-3`).
+> 
+> Pon la explicación final del DHCP dentro de una tarjeta blanca con un icono de Lightbulb.
+> 
+> Aquí está mi contenido fuente:
+> [Se adjuntó 05_servicios_red_posada.md]"
+
+**💡 Justificación técnica:**
+Se aplicó la técnica de **Restricción de Presentación**. Al tener 19 imágenes, un renderizado secuencial tradicional destruiría la experiencia de usuario. Se le exigió explícitamente a la IA el uso de CSS Grid (`grid-cols-2`, `grid-cols-4`) para generar galerías compactas y organizadas por contexto (ej. todas las imágenes de la Unidad Organizativa agrupadas en un solo bloque).

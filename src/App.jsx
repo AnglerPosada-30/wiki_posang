@@ -14,6 +14,10 @@ import ActiveDirectory from './components/ActiveDirectory';
 // Importamos el componente que da estructura a la página de Cliente Dominio.
 import ClienteDominio from './components/ClienteDominio';
 
+// Importamos el componente que da estructura a la página de Configuración de Red.
+import ServiciosRed from './components/ServiciosRed';
+
+
 export default function App() {
   return (
     <Router>
@@ -66,7 +70,6 @@ export default function App() {
               <span className="font-medium text-sm">Active Directory</span>
             </NavLink>
             
-            {/* Puedes agregar el resto de enlaces aquí después */}
 
             {/* Enlace a Cliente Dominio */}
 
@@ -79,8 +82,22 @@ export default function App() {
               <Monitor size={20} className="text-cyan-400" />
               <span className="font-medium text-sm"> Conectar Cliente</span>
             </NavLink>
+            
+            {/* Enlace a Servicios de Red */}
+
+            <NavLink 
+              to="/servicios-red" 
+              className={({ isActive }) => 
+                `flex items-center gap-3 px-4 py-3 rounded-xl transition-colors ${isActive ? 'bg-brand-600 text-white shadow-md' : 'hover:bg-slate-800 hover:text-white'}`
+              }
+            >
+              <Network size={20} className="text-purple-400" />
+              <span className="font-medium text-sm">2.1.4 Servicios (DHCP)</span>
+            </NavLink>
+
           </nav>
         </aside>
+
 
         {/* Contenedor Principal donde cargan las páginas */}
         <main className="flex-1 overflow-y-auto bg-slate-50">
@@ -98,6 +115,8 @@ export default function App() {
               {/* Ruta para Cliente Dominio */}
               <Route path="/cliente-dominio" element={<ClienteDominio />} />
 
+              {/* Ruta para Servicios de Red */}
+              <Route path="/servicios-red" element={<ServiciosRed />} />
             </Routes>
           </div>
         </main>
