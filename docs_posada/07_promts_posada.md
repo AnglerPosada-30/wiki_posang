@@ -121,3 +121,20 @@ Representa el prompt más avanzado del proyecto. Demuestra **Anticipación de Er
 
 **💡 Justificación técnica:**
 Se aplicó la técnica de **Restricción de Presentación**. Al tener 19 imágenes, un renderizado secuencial tradicional destruiría la experiencia de usuario. Se le exigió explícitamente a la IA el uso de CSS Grid (`grid-cols-2`, `grid-cols-4`) para generar galerías compactas y organizadas por contexto (ej. todas las imágenes de la Unidad Organizativa agrupadas en un solo bloque).
+
+
+
+
+---
+
+## 🧠 Reflexión Final: Uso de la IA como Agente vs. Chatbot
+
+Durante el desarrollo y despliegue de esta Wiki interactiva, la Inteligencia Artificial (Gemini) no fue utilizada como un simple **chatbot**. Un uso de tipo chatbot se habría limitado a hacer preguntas aisladas y teóricas (por ejemplo: *"¿Qué es un DHCP?"* o *"Dame un código para una página web"*), obteniendo respuestas genéricas sin conexión con la topología real del laboratorio.
+
+Por el contrario, en este proyecto la IA fue operada como un **agente de desarrollo y formateo colaborativo**. Esto se evidencia en:
+
+1. **Asignación de Roles y Contexto:** Se configuró a la IA bajo el rol de un desarrollador Front-end experto en React y Tailwind CSS, limitando su comportamiento para que actuara dentro de los estándares de desarrollo requeridos.
+2. **Restricción de Datos (Cero Alucinación):** En lugar de pedirle a la IA que redactara el contenido, se le entregó la documentación original (`.md`) previamente redactada con los parámetros exactos (IPs, nombres de dominio como `inacap.local`, rutas de imágenes) y se le impidió inventar texto o modificar los pasos técnicos.
+3. **Resolución de Problemas (Correcciones):** La IA actuó como agente al ayudar a depurar errores de compilación en React, específicamente en el manejo de caracteres de escape en rutas de Windows (ej. `INACAP\Administrator`), adaptando el código fuente para que Vite lo renderizara correctamente sin romper la aplicación.
+
+En conclusión, el uso de la IA como agente en el desarrollo de software permite delegar la estructuración visual y la escritura de código repetitivo (UI/UX), permitiendo enfocar el esfuerzo analítico en la correcta redacción técnica, la configuración de los servidores y el diseño de la arquitectura de la red.

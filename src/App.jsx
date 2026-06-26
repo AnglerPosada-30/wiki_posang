@@ -92,7 +92,7 @@ export default function App() {
               }
             >
               <Network size={20} className="text-purple-400" />
-              <span className="font-medium text-sm">2.1.4 Servicios (DHCP)</span>
+              <span className="font-medium text-sm">Servicios (DHCP)</span>
             </NavLink>
 
           </nav>

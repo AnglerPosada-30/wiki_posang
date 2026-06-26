@@ -1,16 +1,42 @@
-# React + Vite
+# 🖥️ Wiki Lab: Infraestructura Windows Server y Active Directory
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta es una aplicación web interactiva construida con **React** y **Vite**, diseñada para documentar paso a paso la implementación de un laboratorio de red empresarial utilizando Windows Server y Windows 10. 
 
-Currently, two official plugins are available:
+El proyecto funciona como un manual digital, estructurado de forma didáctica para guiar la creación de una topología de red cerrada.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Tecnologías Utilizadas
 
-## React Compiler
+- **React 18** (Librería UI)
+- **Vite** (Herramienta de construcción rápida)
+- **Tailwind CSS** (Framework de estilos utilitarios)
+- **Lucide React** (Librería de íconos SVG)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📚 Contenido de la Wiki
 
-## Expanding the ESLint configuration
+La documentación está dividida en módulos interactivos que detallan cada fase del laboratorio:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Inicio y Topología:** Conceptos teóricos fundamentales, requisitos de hardware y diseño de la red cerrada (`redlab`).
+2. **Instalación Básica:** Creación de la máquina virtual y configuración inicial del sistema operativo Windows Server (SRV-DC01).
+3. **Active Directory:** Instalación del rol AD DS y promoción del servidor a Controlador de Dominio (`inacap.local`).
+4. **Cliente Windows 10:** Preparación de la máquina cliente (PC01), sincronización del protocolo Kerberos y unión formal al dominio corporativo.
+5. **Servicios de Red (DHCP):** Implementación de Unidades Organizativas (Ventas), usuarios, grupos y automatización de entrega de direcciones IP.
+
+## ⚙️ Instalación y Ejecución Local
+
+Para correr este proyecto en tu entorno local, asegúrate de tener [Node.js](https://nodejs.org/) instalado y sigue estos pasos:
+
+1. Instala las dependencias del proyecto:
+   ```bash
+   npm install
+
+2. Inicia el servidor de desarrollo:
+    ```bash
+    npm run dev
+
+3. Abre tu navegador y navega a la ruta indicada en la terminal, generalmente de la siguiente URL:
+    ```bash
+    http://localhost:5173
+
+
+## 👨‍💻 Autor
+Angler Jose Posada Miranda, Desarrollado como parte de las actividades prácticas de la carrera de Ingeniería en Informática.
