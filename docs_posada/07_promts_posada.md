@@ -122,7 +122,44 @@ Representa el prompt más avanzado del proyecto. Demuestra **Anticipación de Er
 **💡 Justificación técnica:**
 Se aplicó la técnica de **Restricción de Presentación**. Al tener 19 imágenes, un renderizado secuencial tradicional destruiría la experiencia de usuario. Se le exigió explícitamente a la IA el uso de CSS Grid (`grid-cols-2`, `grid-cols-4`) para generar galerías compactas y organizadas por contexto (ej. todas las imágenes de la Unidad Organizativa agrupadas en un solo bloque).
 
+---
+## 🛠️ Prompt 6: Políticas de Grupo (GPO)
+**Componente:** `PoliticasGrupo.jsx`
+**Objetivo:** Crear una interfaz enfocada en ciberseguridad/restricciones y estilizar correctamente los bloques de comandos.
 
+> **Prompt utilizado:**
+> "Actúa como un desarrollador Front-end experto. Necesito crear el último componente de mi wiki llamado `PoliticasGrupo.jsx` basado en mi archivo '06_gpo_posada.md'.
+> 
+> **Requisitos técnicos y de diseño:**
+> - Utiliza Tailwind CSS con una paleta de colores en tonos esmeralda (`emerald-600`, `bg-emerald-50`) para dar una sensación de seguridad y configuración de sistema.
+> - Usa íconos de `lucide-react` (como `ShieldAlert`, `Server`, `Monitor`, `Lock`).
+> - Divide la guía en dos grandes bloques: 'Configuración en el Servidor' y 'Aplicación en el Cliente'.
+> 
+> **Instrucciones de Contenido (Crítico):**
+> Usa el texto exacto de mi markdown. No inventes pasos.
+> 
+> **Formato especial:**
+> - En el paso 2 del cliente, donde pido ejecutar `gpupdate /force`, quiero que envuelvas ese comando en un contenedor `div` que simule visualmente una terminal de CMD (fondo oscuro `bg-slate-900`, texto monoespaciado en color verde/esmeralda).
+> - Agrupa las 3 imágenes del servidor en una columna junto al texto, y haz lo mismo con las 3 imágenes del cliente.
+> 
+> Aquí está mi contenido:
+> [Se adjuntó 06_gpo_posada.md]"
+
+**💡 Justificación técnica:**
+Se aplicó la técnica de **Formato Condicionado para Bloques de Código**. En lugar de usar texto plano, se le exigió a la IA generar una interfaz que simule una terminal (CMD) para el comando `gpupdate /force`. Esto mejora radicalmente la Experiencia de Usuario (UX) ya que el estudiante identifica instantáneamente que esa línea debe ejecutarse en una consola.
+
+---
+
+## 🛠️ Prompt 7: Depuración de errores en React (Debugging)
+**Componente:** `App.jsx` y enrutamiento.
+**Objetivo:** Solucionar un error de compilación de Vite al intentar renderizar el último componente de la wiki.
+
+> **Prompt utilizado:**
+> "Uncaught SyntaxError: The requested module '/src/components/PoliticasGrupos.jsx' does not provide an export named 'default' (at App.jsx:21:8)
+> Este error me da la consola."
+
+**💡 Justificación técnica y Registro de Corrección:**
+Durante la integración del componente GPO en las rutas de `App.jsx`, el servidor de Vite colapsó mostrando un error de sintaxis. Se le proporcionó a la IA el log exacto de la consola. La IA actuó como agente de diagnóstico e identificó que el problema era un error tipográfico en la importación (una 's' adicional en el nombre del archivo importado vs el archivo real) y corroboró la sintaxis del `export default`. Esto demuestra cómo la IA acelera el proceso de *troubleshooting* en el desarrollo Front-end, traduciendo errores de consola en soluciones directas de código.
 
 
 ---

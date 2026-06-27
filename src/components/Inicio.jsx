@@ -141,18 +141,6 @@ export default function Inicio() {
          </div>
       </div>
 
-      {/* Nueva Sección de Cuentas */}
-      <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-        <div className="border-b border-slate-100 px-6 py-5 flex items-center gap-3 bg-slate-50/50">
-          <Cloud className="text-sky-500" size={28} />
-          <h3 className="text-xl font-bold text-slate-800">Cuentas y Despliegue</h3>
-        </div>
-        <div className="p-6 md:p-8">
-          <p className="text-slate-600 leading-relaxed text-lg">
-            Se debe crear una cuenta en <strong>GitHub</strong> para mantener el proyecto versionado y respaldado. Además también se debe crear una cuenta en <strong>Vercel</strong> y sincronizarla con la de <strong>GitHub</strong> para poder desplegar la aplicación Wiki terminada y que sea accesible desde internet.
-          </p>
-        </div>
-      </div>
 
     </div>
   );

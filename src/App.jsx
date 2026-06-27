@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
-import { Home, Server, Network, Shield, MonitorPlay, Users, Monitor } from 'lucide-react';
+import { Home, Server, Network, Shield, MonitorPlay, Users, Monitor, ShieldAlert } from 'lucide-react';
 
 // Importamos el componente que da estructura a la página de inicio.
 import Inicio from './components/Inicio';
@@ -17,6 +17,10 @@ import ClienteDominio from './components/ClienteDominio';
 // Importamos el componente que da estructura a la página de Configuración de Red.
 import ServiciosRed from './components/ServiciosRed';
 
+// Importamos el componente que da estructura a la página de Políticas de Grupo.
+import PoliticasGrupo from './components/PoliticasGrupos';
+
+
 
 export default function App() {
   return (
@@ -28,7 +32,7 @@ export default function App() {
           <div className="p-6 border-b border-slate-800 bg-slate-950">
             <h1 className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
               <Server className="text-brand-500" size={24} />
-              Wiki IT
+              Wiki PosAng
             </h1>
             <p className="text-xs text-slate-400 mt-1.5 ml-8">Windows Server & Redes</p>
           </div>
@@ -95,6 +99,18 @@ export default function App() {
               <span className="font-medium text-sm">Servicios (DHCP)</span>
             </NavLink>
 
+            {/* Enlace a Políticas de Grupo */}
+
+            <NavLink 
+              to="/politicas-grupo" 
+              className={({ isActive }) => 
+                `flex items-center gap-3 px-4 py-3 rounded-xl transition-colors ${isActive ? 'bg-brand-600 text-white shadow-md' : 'hover:bg-slate-800 hover:text-white'}`
+              }
+            >
+              <ShieldAlert size={20} className="text-emerald-400" />
+              <span className="font-medium text-sm"> Políticas (GPO)</span>
+            </NavLink>
+
           </nav>
         </aside>
 
@@ -117,6 +133,9 @@ export default function App() {
 
               {/* Ruta para Servicios de Red */}
               <Route path="/servicios-red" element={<ServiciosRed />} />
+
+              {/* Ruta para Políticas de Grupo */}
+              <Route path="/politicas-grupo" element={<PoliticasGrupo />} />
             </Routes>
           </div>
         </main>

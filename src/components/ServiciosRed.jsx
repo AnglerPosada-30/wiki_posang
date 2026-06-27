@@ -1,9 +1,9 @@
 import React from 'react';
-import { Network, HelpCircle, FolderTree, Users, Server, Lightbulb, CheckCircle2 } from 'lucide-react';
+import { Network, HelpCircle, FolderTree, Users, Lightbulb, CheckCircle2 } from 'lucide-react';
 
 export default function ServiciosRed() {
   return (
-    <div className="space-y-8 animate-in fade-in duration-500 pb-10">
+    <div className="space-y-8 animate-in fade-in duration-500 pb-10 servicios-red">
       
       {/* Encabezado */}
       <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
@@ -79,7 +79,7 @@ export default function ServiciosRed() {
                 <li>Haz clic derecho en la carpeta <strong>Ventas → Nuevo → Grupo</strong>.</li>
                 <li>Nombre del grupo: <code>G-Ventas</code> y presiona <strong>Aceptar</strong>.</li>
                 <li>Abre las <strong>Propiedades</strong> del usuario con tu código personal. Ve a la pestaña <strong>Miembro de</strong> y haz clic en <strong>Agregar</strong>.</li>
-                <li>Escribe <code>G-Ventas</code>, haz clic en <strong>Comprobar nombres</strong> y acepta todo. Repite con `prueba1`.</li>
+                <li>Escribe <code>G-Ventas</code>, haz clic en <strong>Comprobar nombres</strong> y acepta todo. Repite con <code>prueba1</code>.</li>
               </ol>
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
                 <img src="/img/img_servicios_red/ventas_grupo.png" alt="Nuevo Grupo" className="rounded border border-slate-200 w-full" />
