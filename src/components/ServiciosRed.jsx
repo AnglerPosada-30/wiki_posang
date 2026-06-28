@@ -10,7 +10,7 @@ export default function ServiciosRed() {
         <div className="bg-slate-900 px-6 py-5 flex items-center gap-4">
           <Network className="text-purple-400" size={32} />
           <h2 className="text-2xl font-bold text-white tracking-tight">
-            2.1.4 Servicios de Red (DHCP) y Usuarios
+            Servicios de Red (DHCP) y Usuarios
           </h2>
         </div>
         

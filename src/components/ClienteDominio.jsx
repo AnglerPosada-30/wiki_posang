@@ -10,7 +10,7 @@ export default function ClienteDominio() {
         <div className="bg-slate-900 px-6 py-5 flex items-center gap-4">
           <Monitor className="text-cyan-400" size={32} />
           <h2 className="text-2xl font-bold text-white tracking-tight">
-            2.1.3 Conectar al Empleado (Windows 10)
+            Conectar al Empleado (Windows 10)
           </h2>
         </div>
         

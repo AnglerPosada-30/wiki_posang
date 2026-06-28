@@ -21,7 +21,7 @@ export default function Instalacion() {
         <div className="bg-slate-900 px-6 py-5 flex items-center gap-4">
           <Server className="text-emerald-400" size={32} />
           <h2 className="text-2xl font-bold text-white tracking-tight">
-            2.1.1 Instalación y Configuración Básica
+            Instalación y Configuración Básica
           </h2>
         </div>
         

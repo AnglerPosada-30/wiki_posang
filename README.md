@@ -20,6 +20,7 @@ La documentación está dividida en módulos interactivos que detallan cada fase
 3. **Active Directory:** Instalación del rol AD DS y promoción del servidor a Controlador de Dominio (`inacap.local`).
 4. **Cliente Windows 10:** Preparación de la máquina cliente (PC01), sincronización del protocolo Kerberos y unión formal al dominio corporativo.
 5. **Servicios de Red (DHCP):** Implementación de Unidades Organizativas (Ventas), usuarios, grupos y automatización de entrega de direcciones IP.
+6. **Políticas de Grupo (GPO):** Configuración de reglas centralizadas desde el servidor para aplicar restricciones a los usuarios del dominio.
 
 ## ⚙️ Instalación y Ejecución Local
 

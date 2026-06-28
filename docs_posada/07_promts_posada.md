@@ -161,6 +161,19 @@ Se aplicó la técnica de **Formato Condicionado para Bloques de Código**. En l
 **💡 Justificación técnica y Registro de Corrección:**
 Durante la integración del componente GPO en las rutas de `App.jsx`, el servidor de Vite colapsó mostrando un error de sintaxis. Se le proporcionó a la IA el log exacto de la consola. La IA actuó como agente de diagnóstico e identificó que el problema era un error tipográfico en la importación (una 's' adicional en el nombre del archivo importado vs el archivo real) y corroboró la sintaxis del `export default`. Esto demuestra cómo la IA acelera el proceso de *troubleshooting* en el desarrollo Front-end, traduciendo errores de consola en soluciones directas de código.
 
+---
+
+## 🛠️ Prompt 8: Refactorización de UX (Menú Colapsable y Enlace Externo)
+**Componente:** `App.jsx` (Navegación principal).
+**Objetivo:** Mejorar la usabilidad de la interfaz en pantallas de distintos tamaños y facilitar el acceso al código fuente del proyecto para su evaluación.
+
+> **Prompt utilizado:**
+> "Gemini, necesito hacerle dos correcciones a la estructura principal de la wiki en App.jsx. 
+> 1. Agregar un botón a la parte de las secciones para que al hacer clic el menú lateral se abra y cierre horizontalmente. 
+> 2. Agregar un botón en la parte inferior del menú para redireccionar a mi repositorio de GitHub."
+
+**💡 Justificación técnica:**
+En esta interacción se utilizó a la IA para implementar lógica de estado en React. Se requirió la importación del hook `useState` para controlar dinámicamente las clases utilitarias de Tailwind CSS (transicionando el ancho de `w-72` a `w-0`). Además, la inclusión del enlace al repositorio demuestra buenas prácticas de portafolio, exigiéndole a la IA el uso correcto de atributos de seguridad (`target="_blank"` y `rel="noopener noreferrer"`) para la redirección externa sin comprometer el rendimiento de la aplicación.
 
 ---
 

@@ -10,7 +10,7 @@ export default function ActiveDirectory() {
         <div className="bg-slate-900 px-6 py-5 flex items-center gap-4">
           <Users className="text-blue-400" size={32} />
           <h2 className="text-2xl font-bold text-white tracking-tight">
-            2.1.2 Active Directory y Dominio
+            Active Directory y Dominio
           </h2>
         </div>
         
